@@ -1,0 +1,12 @@
+body {
+    padding: 0;
+}
+
+#header {
+    padding: 20px;
+    background-color: rgb(76, 174, 255);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
