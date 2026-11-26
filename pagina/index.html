@@ -1,15 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Accesibilidad Web</title>
-        <link rel="stylesheet" href="style/style.css">
-    </head>
-    <body>
-        <div id="header">
-            <h1>Accesibilidad Web</h1>
-            <p>¿Qué es, por qué es importante y qué atributos HTML ayudan para la accesibilidad web?</p>
-        </div>
-    </body>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesibilidad Web</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <header id="header">
+        <h1>Accesibilidad Web</h1>
+        <p>¿Qué es, por qué es importante y qué atributos HTML ayudan a mejorarla?</p>
+    </header>
+    <nav>
+        <a href="#que-es">¿Qué es?</a>
+        <a href="#importancia">¿Por qué es importante?</a>
+        <a href="#atributos">Atributos HTML</a>
+    </nav>
+    <main>
+        <section id="que-es">
+            <h2>¿Qué es la accesibilidad web?</h2>
+            <p>La accesibilidad web consiste en diseñar y desarrollar sitios web que puedan ser utilizados por todas las personas, independientemente de sus capacidades o discapacidades.</p>
+            <p>Una página accesible debe ser fácil de percibir, comprender y utilizar, además de ser compatible con tecnologías de apoyo, como los lectores de pantalla.</p>
+        </section>
+        <section id="importancia">
+            <h2>¿Por qué es importante?</h2>
+            <p>La accesibilidad web es fundamental porque garantiza el acceso equitativo a la información y los servicios digitales para todas las personas, independientemente de sus capacidades, discapacidades o limitaciones técnicas.</p>
+            <p>Al eliminar barreras digitales, se favorece la inclusión social y la igualdad de oportunidades en ámbitos como:</p>
+            <ul>
+                <li>La educación.</li>
+                <li>El empleo.</li>
+                <li>La sanidad.</li>
+                <li>La participación ciudadana.</li>
+            </ul>
+        </section>
+        <section id="atributos">
+            <h2>Atributos HTML que ayudan a la accesibilidad</h2>
+            <h3>alt</h3>
+            <p>Permite describir una imagen para las personas que no pueden verla.</p>
+            <pre><code>&lt;img src="perro.jpg" alt="Un perro jugando"&gt;</code></pre>
+            <h3>lang</h3>
+            <p>Indica el idioma de la página para que los lectores de pantalla puedan pronunciar correctamente el texto.</p>
+            <pre><code>&lt;html lang="es"&gt;</code></pre>
+            <h3>for e id</h3>
+            <p>Permiten relacionar una etiqueta con un campo de un formulario.</p>
+            <pre><code>&lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+&lt;input type="text" id="nombre"&gt;</code></pre>
+            <p>Ejemplo:</p>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre">
+        </section>
+    </main>
+    <footer>
+        <p>Trabajo de accesibilidad web - Iván, Iriome y Ana</p>
+    </footer>
+</body>
 </html>
