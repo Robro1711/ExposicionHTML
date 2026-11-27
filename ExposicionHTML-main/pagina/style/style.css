@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #222;
+    line-height: 1.6;
+}
+
+#header {
+    padding: 25px 15px;
+    background-color: rgb(76, 174, 255);
+    text-align: center;
+}
+
+nav {
+    background-color: #164b75;
+    text-align: center;
+    padding: 10px;
+}
+
+nav a {
+    display: inline-block;
+    color: white;
+    margin: 5px 12px;
+    padding: 6px 4px;
+    text-decoration: none;
+}
+
+nav a:hover, nav a:focus {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 900px;
+    margin: 25px auto;
+    padding: 0 15px;
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border-left: 4px solid rgb(76, 174, 255);
+}
+
+h2 {
+    color: #164b75;
+    margin-top: 0;
+}
+
+pre {
+    background-color: #eee;
+    padding: 12px;
+    overflow-x: auto;
+}
+
+input {
+    padding: 6px;
+    max-width: 90%;
+}
+
+footer {
+    background-color: #164b75;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+p code, li code {
+    background-color: #eee;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+/* Menú fijo arriba al hacer scroll */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* Fondo del enlace al pasar el ratón o con el teclado */
+nav a:hover, nav a:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+}
+
+/* Cabecera con degradado suave */
+#header {
+    background: linear-gradient(135deg, rgb(76, 174, 255), #9fd4ff);
+}
+
+/* Sombra ligera en las secciones */
+section {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    scroll-margin-top: 70px;
+}
+
+/* Desplazamiento suave al pulsar el menú */
+html {
+    scroll-behavior: smooth;
+}
+
+@media (min-width: 700px) and (min-height: 500px) {
+    nav {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+}
+
+#header h1 {
+    color: #0d3556;
+    font-size: clamp(2rem, 6vw, 3rem);
+}
+
+#header p {
+    font-size: clamp(1.1rem, 3vw, 1.4rem);
+    color: #0d3556;
+}
+
+.saltar {
+    position: absolute;
+    left: -9999px;
+    background: white;
+    color: #164b75;
+    padding: 8px 12px;
+}
+
+.saltar:focus {
+    left: 10px;
+    top: 10px;
+    z-index: 20;
+}

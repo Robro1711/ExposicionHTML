@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesibilidad Web</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+    <header id="header">
+        <h1>Accesibilidad Web</h1>
+        <p>¿Qué es, por qué es importante y qué atributos HTML ayudan a mejorarla?</p>
+    </header>
+    <nav aria-label="Navegación principal">
+        <a href="#que-es">¿Qué es?</a>
+        <a href="#importancia">¿Por qué es importante?</a>
+        <a href="#atributos">Atributos HTML</a>
+    </nav>
+    <main id="contenido">
+        <section id="que-es">
+            <h2>¿Qué es la accesibilidad web?</h2>
+            <p>La accesibilidad web consiste en diseñar y desarrollar sitios web que puedan ser utilizados por todas las personas, independientemente de sus capacidades o discapacidades.</p>
+            <p>Una página accesible debe ser fácil de percibir, comprender y utilizar, además de ser compatible con tecnologías de apoyo, como los lectores de pantalla.</p>
+        <h3>Principios de las WCAG (POUR)</h3>
+<p>Las WCAG (Pautas de Accesibilidad para el Contenido Web) las publica el W3C y son el estándar internacional. Se basan en cuatro principios:</p>
+<ul>
+    <li><strong>Perceptible</strong>: la información debe poder percibirse con distintos sentidos, por ejemplo con textos alternativos y subtítulos.</li>
+    <li><strong>Operable</strong>: se debe poder usar la web con teclado, sin depender solo del ratón.</li>
+    <li><strong>Comprensible</strong>: los textos y el funcionamiento de la página deben ser claros y predecibles.</li>
+    <li><strong>Robusto</strong>: el contenido debe funcionar con distintos navegadores y tecnologías de apoyo.</li>
+</ul>
+<h3>Niveles de conformidad</h3>
+<p>Las WCAG tienen tres niveles: A (el básico), AA (el más habitual y el que suele exigir la normativa) y AAA (el más exigente).</p>
+<h3>A quién ayuda</h3>
+<ul>
+    <li><strong>Discapacidad visual</strong>: lectores de pantalla, buen contraste y textos alternativos.</li>
+    <li><strong>Discapacidad auditiva</strong>: subtítulos y transcripciones.</li>
+    <li><strong>Discapacidad motora</strong>: navegación solo con teclado y botones grandes.</li>
+    <li><strong>Discapacidad cognitiva</strong>: textos claros y estructura sencilla.</li>
+</ul>
+         </section>
+        <section id="importancia">
+            <h2>¿Por qué es importante?</h2>
+            <p>La accesibilidad web es fundamental porque garantiza el acceso equitativo a la información y los servicios digitales para todas las personas, independientemente de sus capacidades, discapacidades o limitaciones técnicas.</p>
+            <p>Al eliminar barreras digitales, se favorece la inclusión social y la igualdad de oportunidades en ámbitos como:</p>
+            <ul>
+                <li>La educación.</li>
+                <li>El empleo.</li>
+                <li>La sanidad.</li>
+                <li>La participación ciudadana.</li>
+            </ul>
+            <h3>Beneficia a todos</h3>
+<p>Una web accesible también ayuda a personas mayores, a quien usa el móvil con mucho sol o a quien tiene un brazo escayolado. Además, suele ser más fácil de usar y de encontrar en los buscadores.</p>
+<h3>Normativa</h3>
+<p>En España, el Real Decreto 1112/2018 obliga a que las webs y aplicaciones del sector público sean accesibles. En la Unión Europea, la Directiva 2019/882 (Ley Europea de Accesibilidad) extiende esa exigencia a más productos y servicios digitales.</p>
+        </section>
+      <section id="atributos">
+    <h2>Atributos HTML que ayudan a la accesibilidad</h2>
+    <h3>alt</h3>
+    <p>Permite describir una imagen para las personas que no pueden verla.</p>
+    <p>Si la imagen es solo decorativa, se deja vacío (<code>alt=""</code>) para que el lector de pantalla la ignore.</p>
+    <pre><code>&lt;img src="perro.jpg" alt="Un perro jugando"&gt;</code></pre>
+    <h3>lang</h3>
+    <h3>Subtítulos en vídeo (track)</h3>
+<p>Los subtítulos permiten que las personas sordas o con dificultades de audición puedan seguir un vídeo. Se añaden con la etiqueta <code>track</code> dentro de <code>video</code>.</p>
+<pre><code>&lt;video controls&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    &lt;track kind="captions" src="subtitulos.vtt" srclang="es" label="Español" default&gt;
+&lt;/video&gt;</code></pre>
+    <p>Indica el idioma de la página para que los lectores de pantalla puedan pronunciar correctamente el texto.</p>
+    <pre><code>&lt;html lang="es"&gt;</code></pre>
+    <h3>for e id</h3>
+    <p>Permiten relacionar una etiqueta con un campo de un formulario.</p>
+    <pre><code>&lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+&lt;input type="text" id="nombre"&gt;</code></pre>
+    <p>Ejemplo:</p>
+    <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre">
+    </form>
+    <h3>aria-label</h3>
+    <p>Da un nombre accesible a un elemento que no tiene texto visible, como un botón con solo un icono.</p>
+    <pre><code>&lt;button aria-label="Cerrar menú"&gt;X&lt;/button&gt;</code></pre>
+    <h3>title</h3>
+    <p>Añade información extra a un elemento. No sustituye al texto del enlace, solo lo complementa.</p>
+    <pre><code>&lt;a href="https://www.w3.org/WAI/" title="Iniciativa de accesibilidad del W3C"&gt;W3C WAI&lt;/a&gt;</code></pre>
+</section>
+<section id="otros">
+    <h2>Otros elementos que mejoran la accesibilidad</h2>
+    <h3>Vídeo y audio</h3>
+    <ul>
+        <li>Transcripción: el texto completo del audio o del vídeo.</li>
+        <li>Audiodescripción: una voz que explica lo que ocurre en pantalla, para personas ciegas.</li>
+        <li>Sin reproducción automática: el usuario debe poder pausar y controlar el volumen.</li>
+    </ul>
+    <h3>Teclado</h3>
+    <ul>
+        <li>Poder usar toda la web solo con Tab, Enter y Espacio, sin ratón.</li>
+        <li>Foco visible en enlaces y campos.</li>
+        <li>Enlace "Saltar al contenido" al principio de la página.</li>
+    </ul>
+    <h3>Color y texto</h3>
+    <ul>
+        <li>Buen contraste entre el texto y el fondo.</li>
+        <li>No usar solo el color para dar información: un error en rojo debe llevar también un texto.</li>
+        <li>Que la página se pueda ampliar hasta el 200 % sin romperse.</li>
+    </ul>
+    <h3>Estructura y contenido</h3>
+    <ul>
+        <li>Encabezados en orden (h1, h2, h3).</li>
+        <li>Enlaces con texto claro, como "Ver las WCAG", en lugar de "Pincha aquí".</li>
+        <li>Lenguaje claro y sencillo.</li>
+        <li>Evitar destellos de más de 3 por segundo, que pueden provocar crisis epilépticas.</li>
+        <li>Dar tiempo suficiente para leer o rellenar, sin cierres automáticos.</li>
+    </ul>
+</section>
+    </main>
+    <footer>
+        <p>Trabajo de accesibilidad web - Iván, Iriome y Ana</p>
+    </footer>
+</body>
+</html>
